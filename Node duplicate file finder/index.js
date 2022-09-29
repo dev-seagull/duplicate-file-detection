@@ -28,10 +28,3 @@ const duplicates = findDuplicates({ sourcePath, searchPaths }).then(duplicates =
       });
 });
 
-// C:/Users/User/Desktop/Data
-
-//let rowsAsString = data.map(row => {
-//    return row.join(",");
-//})
-
-//console.log(rowsAsString)
