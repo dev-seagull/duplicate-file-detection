@@ -9,6 +9,7 @@
   "author": "Seagull dev team",
   "license": "ISC",
   "dependencies": {
-    "duplicate-file-finder": "^0.4.0"
+    "duplicate-file-finder": "^0.4.0",
+    "prompt-sync": "^4.2.0"
   }
 }
