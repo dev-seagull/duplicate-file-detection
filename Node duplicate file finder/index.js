@@ -14,9 +14,12 @@ for(let num = 0; num < numOfSearchPaths; num++){
 
   
 const duplicates = findDuplicates({ sourcePath, searchPaths }).then(duplicates => {
-    console.log(duplicates);
-    duplicates = JSON.stringify(duplicates);
-    fs.writeFile("duplicatedFiles.json", duplicates, (err) => {
+    let result = duplicates.map(row => {
+        return row.join(",");
+    })
+    console.log(result);
+    result = JSON.stringify(result);
+    fs.writeFile("duplicatedFiles.json", result, (err) => {
         if (err) 
         console.log("An error occured while writing JSON Object to File.");
         else {
@@ -25,4 +28,10 @@ const duplicates = findDuplicates({ sourcePath, searchPaths }).then(duplicates =
       });
 });
 
-//C:/Users/User/Desktop/Data/FirstFile
+// C:/Users/User/Desktop/Data
+
+//let rowsAsString = data.map(row => {
+//    return row.join(",");
+//})
+
+//console.log(rowsAsString)
