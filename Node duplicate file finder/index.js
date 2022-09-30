@@ -26,6 +26,7 @@ const duplicates = findDuplicates({ sourcePath, searchPaths }).then(duplicates =
 });
 
 
+// C:/Users/User/Desktop/Data
 
 //let result = duplicates.map(row => {
 //    return row.join(",");
