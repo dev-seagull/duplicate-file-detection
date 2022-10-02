@@ -3,6 +3,7 @@ const prompt = require('prompt-sync')();
 const fs = require('fs');
 
 
+
 const sourcePath = prompt('Enter the sourcePath:');
 const numOfSearchPaths = Number(prompt('Enter the number of search path:'));
 const searchPaths = [];
@@ -28,7 +29,5 @@ const duplicates = findDuplicates({ sourcePath, searchPaths }).then(duplicates =
 
 // C:/Users/User/Desktop/Data
 
-//let result = duplicates.map(row => {
-//    return row.join(",");
-//})
+
 

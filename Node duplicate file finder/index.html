@@ -5,6 +5,46 @@
     </head>
 
     <body>
+        <div>
+            <h1 id="mainHeader">Duplicated File Finder</h1>
+        </div>
+        <div id="paths">
+            <h2>Source path:C:/Users/User/Desktop/Data/FirstFile</h2><br>
+            <h2>First Search path:C:/Users/User/Desktop/Data/SecondFile</h2><br>
+            <h2>Second Search path:C:/Users/User/Desktop/Data/ThirdFile</h2><br>   
+        </div>
+        <table id="result">
+            <tr>
+                <td id="FirstResult"></td>
+            </tr>
+            <tr>
+                <td id="SecondResult"></td>
+            </tr>
+            <tr>
+                <td id="ThirdResult"></td>
+            </tr>   
+        </table>
+        
+
+        <script type="module">
+            fetch('./duplicatedFiles.json')
+            .then((res) => res.json())
+            .then((data) => {
+                var duplicatedFiles = data;
+                var firstDuplicatedFileInHTML = document.getElementById("FirstResult");
+                var secondDuplicatedFileInHTML = document.getElementById("SecondResult");
+                var thirdDuplicatedFileInHTML = document.getElementById("ThirdResult");
+
+                var firstDuplicatesFile = data[0];
+                var secondDuplicatesFile = data[1];
+                var thirdDuplicatesFile = data[2];
+
+                firstDuplicatedFileInHTML.innerHTML = firstDuplicatesFile;
+                secondDuplicatedFileInHTML.innerHTML = secondDuplicatesFile;
+                thirdDuplicatedFileInHTML.innerHTML = thirdDuplicatesFile;
+
+            });
+        </script> 
 
     </body>
 </html>    
