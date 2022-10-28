@@ -1,0 +1,5 @@
+# Dependecies file
+node_modules/
+
+# Output file
+/duplicatedFiles.json
